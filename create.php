@@ -43,26 +43,21 @@ if (isset($_POST["submit"])) {
     <div class="container min-vh-100 d-flex justify-content-center align-items-center">
         <form action="" method="post">
             <div class="mb-3">
-                <label for="firstName" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="firstName" name="firstname" autocomplete="off" required>
+                <input type="text" class="form-control" id="firstName" name="firstname" autocomplete="off" placeholder="First Name" required>
             </div>
             <div class="mb-3">
-                <label for="lastName" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="lastName" name="lastname" autocomplete="off" required>
+                <input type="text" class="form-control" id="lastName" name="lastname" autocomplete="off" placeholder="Last Name" required>
             </div>
             <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username" autocomplete="off" required>
+                <input type="text" class="form-control" id="username" name="username" autocomplete="off" placeholder="Username" required>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" autocomplete="off" required>
+                <input type="email" class="form-control" id="email" name="email" autocomplete="off" placeholder="E-mail" required>
             </div>
             <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="pwd" autocomplete="off" required>
+                <input type="password" class="form-control" id="password" name="pwd" autocomplete="off" placeholder="Password" required>
             </div>
-            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submit" class="btn btn-primary w-100">Submit</button>
         </form>
     </div>
 
