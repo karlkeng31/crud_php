@@ -38,22 +38,38 @@
                 $sql = "SELECT * FROM `users` LIMIT 9";
                 $result = mysqli_query($conn, $sql);
 
+                $num = 1;
+
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                 ?>
                         <tr>
-                            <td><?php echo $row['id'] ?></td>
-                            <td><?php echo $row['firstname'] ?></td>
-                            <td><?php echo $row['lastname'] ?></td>
-                            <td><?php echo $row['username'] ?></td>
-                            <td><?php echo $row['email'] ?></td>
-                            <td><?php echo $row['created_at'] ?></td>
                             <td>
-                                <a href="update.php?id=<?php echo $row["id"]; ?>" class="text-uppercase text-decoration-none text-light btn btn-primary">update</a>
-                                <a href="delete.php?id=<?php echo $row["id"]; ?>" class="text-uppercase text-decoration-none text-light btn btn-danger">delete</a>
+                                <?php echo $num ?>
+                            </td>
+                            <td>
+                                <?php echo $row['firstname'] ?>
+                            </td>
+                            <td>
+                                <?php echo $row['lastname'] ?>
+                            </td>
+                            <td>
+                                <?php echo $row['username'] ?>
+                            </td>
+                            <td>
+                                <?php echo $row['email'] ?>
+                            </td>
+                            <td>
+                                <?php echo $row['created_at'] ?>
+                            </td>
+                            <td>
+                                <a href="update.php?id=<?php echo $row["id"] ?>" class="text-uppercase text-decoration-none text-light btn btn-primary">update</a>
+                                <a href="delete.php?id=<?php echo $row["id"] ?>" class="text-uppercase text-decoration-none text-light btn btn-danger">delete</a>
                             </td>
                         </tr>
+
                 <?php
+                        $num++;
                     }
                 }
                 ?>
